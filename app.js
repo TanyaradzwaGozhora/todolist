@@ -18,11 +18,12 @@ app.use(bodyParser.urlencoded({extended: true}));//parse incoming request
 //bodyParser.urlencoded({extended: ...}) basically tells the system
 // whether you want to use a simple algorithm for shallow parsing
 // (i.e. false) or complex algorithm for deep parsing that can deal
-// with nested objects (i.e. true).
+// with nested objects (i.e. true). (stackoverflow knwoledge)
 app.use(express.static("public"));//this serves all static files in the public
 //folder
 
-mongoose.connect('mongodb+srv://admin-tanya:ilG4evrr@cluster0-mrozz.mongodb.net/todolistDB', {useNewUrlParser:true, useUnifiedTopology: true});
+//substitute your dets
+mongoose.connect('mongodb+srv://mydets', {useNewUrlParser:true, useUnifiedTopology: true});
 //connecting to our mongoose server
 
 //our object schema for our different collections
